@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrackPoint - Assets</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        /* Header */
+        .header {
+            background: white;
+            padding: 1rem 2rem;
+            border-bottom: 1px solid #e9ecef;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .nav-tabs {
+            display: flex;
+            gap: 0;
+        }
+
+        .nav-tab {
+            padding: 0.75rem 1.5rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 0.95rem;
+            color: #666;
+            transition: all 0.2s;
+            text-decoration: none;
+            border-radius: 6px 6px 0 0;
+        }
+
+        .nav-tab:hover {
+            background: #f1f3f4;
+            color: #333;
+        }
+
+        .nav-tab.active {
+            background: #4285f4;
+            color: white;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Search and Filter Section */
+        .search-filter-section {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+        }
+
+        .search-row {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .search-dropdown {
+            padding: 0.5rem 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background: white;
+            font-size: 0.9rem;
+            color: #666;
+            min-width: 120px;
+        }
+
+        .search-input {
+            flex: 1;
+            padding: 0.5rem 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        .search-input::placeholder {
+            color: #999;
+        }
+
+        /* Assets Section */
+        .assets-section {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .assets-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .assets-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #333;
+            margin: 0;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .btn {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: #4285f4;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #3367d6;
+        }
+
+        .btn-success {
+            background: #34a853;
+            color: white;
+        }
+
+        .btn-success:hover {
+            background: #2d8f47;
+        }
+
+        /* Table Styles */
+        .assets-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .assets-table th {
+            background: #f8f9fa;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .assets-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #f1f3f4;
+            font-size: 0.9rem;
+        }
+
+        .assets-table tr:hover {
+            background: #f8f9fa;
+        }
+
+        .asset-id {
+            font-family: 'Courier New', monospace;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .asset-name {
+            color: #4285f4;
+            font-weight: 500;
+        }
+
+        .asset-type {
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .type-gadgets {
+            background: #e8f0fe;
+            color: #1a73e8;
+        }
+
+        .type-furniture {
+            background: #e6f4ea;
+            color: #137333;
+        }
+
+        .type-electronics {
+            background: #fef7e0;
+            color: #ea8600;
+        }
+
+        .department-tag {
+            color: #666;
+            font-weight: 500;
+        }
+
+        .location {
+            color: #666;
+        }
+
+        .status-badge {
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .status-in-use {
+            background: #e6f4ea;
+            color: #137333;
+        }
+
+        .status-active {
+            background: #e8f0fe;
+            color: #1a73e8;
+        }
+
+        .status-maintenance {
+            background: #fef7e0;
+            color: #ea8600;
+        }
+
+        .status-retired {
+            background: #fce8e6;
+            color: #d33b2c;
+        }
+
+        .edit-btn {
+            background: #f8f9fa;
+            color: #666;
+            border: 1px solid #e1e4e8;
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .edit-btn:hover {
+            background: #e1e4e8;
+            color: #333;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .modal-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #666;
+        }
+
+        .modal-form label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .modal-form input,
+        .modal-form select {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        .modal-form .btn {
+            width: auto;
+            padding: 0.5rem 1rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-tabs {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+
+            .search-row {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .search-dropdown {
+                min-width: auto;
+            }
+
+            .assets-header {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: stretch;
+            }
+
+            .action-buttons {
+                justify-content: center;
+            }
+
+            .assets-table {
+                font-size: 0.8rem;
+            }
+
+            .assets-table th,
+            .assets-table td {
+                padding: 0.5rem;
+            }
+
+            .modal-content {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    {% include 'navbar.html' %}
+
+    <div class="container">
+        <div class="search-filter-section">
+            <div class="search-row">
+                <select class="search-dropdown">
+                    <option value="">All Fields</option>
+                    <option value="name">Name</option>
+                    <option value="asset_id">Asset ID</option>
+                    <option value="type">Type</option>
+                    <option value="department">Department</option>
+                    <option value="status">Status</option>
+                </select>
+
+                <input type="text" class="search-input" placeholder="Search by All Fields">
+            </div>
+        </div>
+
+        <div class="assets-section">
+            <div class="assets-header">
+                <h2 class="assets-title">Assets</h2>
+                <div class="action-buttons">
+                    <a href="{% url 'add_asset' %}" class="btn btn-primary" id="addAssetBtn">
+                        <span>+</span> Add Asset
+                    </a>
+                    <a href="#" class="btn btn-success">
+                        <span>📊</span> Export to Excel
+                    </a>
+                </div>
+            </div>
+
+            <table class="assets-table">
+                <thead>
+                    <tr>
+                        <th>ASSET ID</th>
+                        <th>NAME</th>
+                        <th>TYPE</th>
+                        <th>DEPARTMENT</th>
+                        <th>LOCATION</th>
+                        <th>STATUS</th>
+                        <th>ACTIONS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for asset in all_assets %}
+                    <tr>
+                        <td class="asset-id">{{ asset.id|default:"A"|add:asset.id|stringformat:"03d" }}</td>
+                        <td class="asset-name">{{ asset.name }}</td>
+                        <td>
+                            <span
+                                class="asset-type {% if asset.asset_type.name == 'Gadgets' %}type-gadgets{% elif asset.asset_type.name == 'Furniture' %}type-furniture{% elif asset.asset_type.name == 'Electronics' %}type-electronics{% else %}type-gadgets{% endif %}">
+                                {{ asset.asset_type }}
+                            </span>
+                        </td>
+                        <td class="department-tag">{{ asset.department }}</td>
+                        <td class="location">
+                            {{ asset.location }}
+                        </td>
+                        <td>
+                            <span
+                                class="status-badge {% if asset.status == 'in_use' %}status-in-use{% elif asset.status == 'active' %}status-active{% elif asset.status == 'maintenance' %}status-maintenance{% elif asset.status == 'retired' %}status-retired{% else %}status-active{% endif %}">
+                                {{ asset.status }}
+                            </span>
+                        </td>
+                        <td>
+                            <button class="edit-btn" onclick="editAsset('{{ asset.id }}')">Edit</button>
+                        </td>
+                    </tr>
+                    {% empty %}
+                    <tr>
+                        <td colspan="7" class="empty-state">
+                            {% if search_query %}
+                            No assets found matching "{{ search_query }}"
+                            {% else %}
+                            No assets found. <a href="{% url 'trackpoint:add_asset' %}">Add the first asset</a>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Add Asset Modal -->
+    <div class="modal" id="addAssetModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Add New Asset</h2>
+                <button class="close-btn" id="closeModalBtn">&times;</button>
+            </div>
+            <!-- <form id="addAssetForm" class="modal-form" method="POST">
+
+                {% csrf_token %}
+                <label for="assetName">Name:</label>
+                <input type="text" id="assetName" name="name" required>
+
+                <label for="assetType">Type:</label>
+                <select id="assetType" name="asset_type_id" required>
+                    <option value="">Select Type</option>
+                    {% for type in asset_type %}
+                    <option value="{{ type.id }}">{{ type.name }}</option>
+                    {% endfor %}
+                </select>
+
+                <label for="department">Department:</label>
+                <select id="department" name="department_id" required>
+                    <option value="">Select Department</option>
+                    {% for dept in departments %}
+                    <option value="{{ dept.id }}">{{ dept.name }}</option>
+                    {% endfor %}
+                </select>
+
+                <label for="status">Status:</label>
+                <select id="status" name="status" required>
+                    <option value="active">Active</option>
+                    <option value="in use">In Use</option>
+                    <option value="maintenance">Under Maintenance</option>
+                    <option value="retired">Retired</option>
+                </select>
+
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location">
+
+                <button type="submit" class="btn btn-primary">Save</button>
+                <button type="button" class="btn" id="cancelModalBtn">Cancel</button>
+            </form> -->
+     
+        </div>
+    </div>
+
+    <script>
+        // Search functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            const fieldFilter = document.querySelector('.search-dropdown');
+            const searchInput = document.querySelector('.search-input');
+            const table = document.querySelector('.assets-table tbody');
+            const rows = Array.from(table.querySelectorAll('tr'));
+
+            fieldFilter.addEventListener('change', function () {
+                const selectedField = this.value;
+                if (selectedField) {
+                    searchInput.placeholder = `Search by ${selectedField.charAt(0).toUpperCase() + selectedField.slice(1)}`;
+                } else {
+                    searchInput.placeholder = 'Search by All Fields';
+                }
+                filterTable();
+            });
+
+            searchInput.addEventListener('input', filterTable);
+
+            function filterTable() {
+                const searchTerm = searchInput.value.toLowerCase();
+                const selectedField = fieldFilter.value;
+
+                rows.forEach(row => {
+                    const cells = row.querySelectorAll('td');
+                    let searchableText = '';
+
+                    if (selectedField === 'name') {
+                        searchableText = cells[1].textContent.toLowerCase();
+                    } else if (selectedField === 'asset_id') {
+                        searchableText = cells[0].textContent.toLowerCase();
+                    } else if (selectedField === 'type') {
+                        searchableText = cells[2].textContent.toLowerCase();
+                    } else if (selectedField === 'department') {
+                        searchableText = cells[3].textContent.toLowerCase();
+                    } else if (selectedField === 'status') {
+                        searchableText = cells[5].textContent.toLowerCase();
+                    } else {
+                        searchableText = Array.from(cells).map(cell => cell.textContent).join(' ').toLowerCase();
+                    }
+
+                    if (searchableText.includes(searchTerm)) {
+                        row.style.display = '';
+                    } else {
+                        row.style.display = 'none';
+                    }
+                });
+            }
+        });
+
+        // Edit button functionality
+        document.querySelectorAll('.edit-btn').forEach(btn => {
+            btn.addEventListener('click', function () {
+                const row = this.closest('tr');
+                const assetId = row.querySelector('.asset-id').textContent;
+                const assetName = row.querySelector('.asset-name').textContent;
+                alert(`Edit functionality for ${assetName} (${assetId})`);
+            });
+        });
+
+        // Modal functionality
+        const addAssetBtn = document.getElementById('addAssetBtn');
+        const addAssetModal = document.getElementById('addAssetModal');
+        const closeModalBtn = document.getElementById('closeModalBtn');
+        const cancelModalBtn = document.getElementById('cancelModalBtn');
+        const addAssetForm = document.getElementById('addAssetForm');
+
+        addAssetBtn.addEventListener('click', () => {
+            addAssetModal.style.display = 'flex';
+        });
+
+        closeModalBtn.addEventListener('click', () => {
+            addAssetModal.style.display = 'none';
+        });
+
+        cancelModalBtn.addEventListener('click', () => {
+            addAssetModal.style.display = 'none';
+        });
+
+        addAssetForm.addEventListener('submit', (e) => {
+            // No need for async fetch since we're using a regular form submission
+            // The form will submit to the Django view, and we'll rely on a redirect
+        });
+    </script>
+</body>
+
+</html>

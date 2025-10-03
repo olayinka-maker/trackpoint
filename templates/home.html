@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome | TrackPoint</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white shadow-lg rounded-2xl p-10 w-full max-w-md text-center">
+        <h1 class="text-3xl font-bold text-gray-800 mb-4">Welcome to TrackPoint</h1>
+        <p class="text-gray-600 mb-6">Track your staff and assets with ease.</p>
+        <a href="{% url 'login' %}"
+            class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg shadow-md transition">
+            Login to Continue
+        </a>
+    </div>
+</body>
+
+</html>

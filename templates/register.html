@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Create New Staff</title>
+</head>
+
+<body>
+    <h2>Create New Staff</h2>
+
+    <form method="post">
+        {% csrf_token %}
+
+        <h3>User Information</h3>
+        {{ user_form.as_p }}
+
+        <h3>Staff Information</h3>
+        {{ staff_form.as_p }}
+
+        <button type="submit">Create Staff</button>
+    </form>
+</body>
+
+</html> 
